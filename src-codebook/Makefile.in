@@ -1,0 +1,18 @@
+prefix = @prefix@
+exec_prefix = @exec_prefix@
+bindir = @bindir@
+CFLAGS = -Wall -Werror -pedantic-errors -lgmp -lm -lpthread -Ofast
+OBJECTS = ecc.o
+
+%.o : %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+codebook-gen: codebook-gen.c $(OBJECTS)
+	$(CC) $(CFLAGS) -o codebook-gen codebook-gen.c $(OBJECTS)
+
+clean:
+	rm -f codebook-gen $(OBJECTS)
+
+install: codebook-gen
+	install -d $(bindir)
+	install -t $(bindir) codebook-gen
