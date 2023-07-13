@@ -1,8 +1,8 @@
 # discrete-log
 
-This repo contains the source code to our anonymous submission
+This repo contains the source code to our submission
 
-> Dlog is Practically as Hard (or Easy) as DH - Solving Dlogs via DH Oracles on EC Standards
+> [Dlog is Practically as Hard (or Easy) as DH - Solving Dlogs via DH Oracles on EC Standards](https://eprint.iacr.org/2023/539)
 
 ## Files
 
